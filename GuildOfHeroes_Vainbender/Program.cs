@@ -2,57 +2,53 @@
 Hero anastasia = new Hero("Анастасия", 90);
 Hero artem = new Hero("Артём", 120);
 
-yaroslav.Health = 75;
+Console.WriteLine($"До вызовов: {yaroslav.Health}, {anastasia.Health}, {artem.Health}");
 
-Console.WriteLine(">>> Герой 1 <<<");
-Console.WriteLine($"Имя: {yaroslav.Name}");
-Console.WriteLine($"Здоровье: {yaroslav.Health}");
-Console.WriteLine($"Уровень: {yaroslav.Level}");
-Console.WriteLine($"Опыт: {yaroslav.Experience}");
+yaroslav.TakeDamage(25);
+anastasia.TakeDamage(30);
 
-Console.WriteLine();
+Console.WriteLine($"После вызовов: {yaroslav.Health}, {anastasia.Health}, {artem.Health}");
 
-Console.WriteLine(">>> Герой 2 <<<");
-Console.WriteLine($"Имя: {anastasia.Name}");
-Console.WriteLine($"Здоровье: {anastasia.Health}");
-Console.WriteLine($"Уровень: {anastasia.Level}");
-Console.WriteLine($"Опыт: {anastasia.Experience}");
+yaroslav.TakeDamage(-20);
+Console.WriteLine($"После неверного урона: {yaroslav.Health}");
 
-Console.WriteLine();
+artem.TakeDamage(200);
+Console.WriteLine($"После сильного урона, Артём: {artem.Health}");
+yaroslav.Heal(10);
+yaroslav.GainExperience(40);
+yaroslav.GainExperience(25);
 
-Console.WriteLine(">>> Герой 3 <<<");
-Console.WriteLine($"Имя: {artem.Name}");
-Console.WriteLine($"Здоровье: {artem.Health}");
-Console.WriteLine($"Уровень: {artem.Level}");
-Console.WriteLine($"Опыт: {artem.Experience}");
+Console.WriteLine($"После лечения, Ярослав: {yaroslav.Health}");
+Console.WriteLine($"Опыт Ярослава: {yaroslav.Experience}");
 
-Console.WriteLine();
 
-Character Hawkeye = new Character("Соколиный глаз", 32, "Marvel", "Человек");
-Character Klee = new Character("Кли", 12, "Genshin Impact", "Эльф");
-Character Shane = new Character("Шейн", 20, "Stardew Valley", "Человек");
 
-Console.WriteLine(">>> Персонаж 1 <<<");
-Console.WriteLine($"Имя: {Hawkeye.Name}");
-Console.WriteLine($"Возраст: {Hawkeye.Age}");
-Console.WriteLine($"Раса: {Hawkeye.Race}");
-Console.WriteLine($"Происхождение: {Hawkeye.Origin}");
-Console.WriteLine($"Статус: {(Hawkeye.IsAlive ? "Жив" : "Мёртв")}");
+// лаба 1
+// Character Hawkeye = new Character("Соколиный глаз", 32, "Marvel", "Человек");
+// Character Klee = new Character("Кли", 12, "Genshin Impact", "Эльф");
+// Character Shane = new Character("Шейн", 20, "Stardew Valley", "Человек");
 
-Console.WriteLine();
+// Console.WriteLine(">>> Персонаж 1 <<<");
+// Console.WriteLine($"Имя: {Hawkeye.Name}");
+// Console.WriteLine($"Возраст: {Hawkeye.Age}");
+// Console.WriteLine($"Раса: {Hawkeye.Race}");
+// Console.WriteLine($"Происхождение: {Hawkeye.Origin}");
+// Console.WriteLine($"Статус: {(Hawkeye.IsAlive ? "Жив" : "Мёртв")}");
 
-Console.WriteLine(">>> Персонаж 2 <<<");
-Console.WriteLine($"Имя: {Klee.Name}");
-Console.WriteLine($"Возраст: {Klee.Age}");
-Console.WriteLine($"Раса: {Klee.Race}");
-Console.WriteLine($"Происхождение: {Klee.Origin}");
-Console.WriteLine($"Статус: {(Klee.IsAlive ? "Жив" : "Мёртв")}");
+// Console.WriteLine();
 
-Console.WriteLine();
+// Console.WriteLine(">>> Персонаж 2 <<<");
+// Console.WriteLine($"Имя: {Klee.Name}");
+// Console.WriteLine($"Возраст: {Klee.Age}");
+// Console.WriteLine($"Раса: {Klee.Race}");
+// Console.WriteLine($"Происхождение: {Klee.Origin}");
+// Console.WriteLine($"Статус: {(Klee.IsAlive ? "Жив" : "Мёртв")}");
 
-Console.WriteLine(">>> Персонаж 3 <<<");
-Console.WriteLine($"Имя: {Shane.Name}");
-Console.WriteLine($"Возраст: {Shane.Age}");
-Console.WriteLine($"Раса: {Shane.Race}");
-Console.WriteLine($"Происхождение: {Shane.Origin}");
-Console.WriteLine($"Статус: {(Shane.IsAlive ? "Жив" : "Мёртв")}");
+// Console.WriteLine();
+
+// Console.WriteLine(">>> Персонаж 3 <<<");
+// Console.WriteLine($"Имя: {Shane.Name}");
+// Console.WriteLine($"Возраст: {Shane.Age}");
+// Console.WriteLine($"Раса: {Shane.Race}");
+// Console.WriteLine($"Происхождение: {Shane.Origin}");
+// Console.WriteLine($"Статус: {(Shane.IsAlive ? "Жив" : "Мёртв")}");
