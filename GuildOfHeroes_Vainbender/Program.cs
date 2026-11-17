@@ -1,8 +1,13 @@
 ﻿Hero yaroslav = new Hero("Ярослав", 100);
 Hero anastasia = new Hero("Анастасия", 90);
 Hero artem = new Hero("Артём", 120);
-Hero alexander = new Hero("Александр", 150);
+Hero alexander = new Hero("   Александр   ", 150);
 
+alexander.TakeDamage(10);
+alexander.Heal(10);
+
+Console.WriteLine(">>> Участники готовы <<<");
+Console.WriteLine();
 Console.WriteLine(yaroslav.GetInfo());
 Console.WriteLine();
 Console.WriteLine(anastasia.GetInfo());
@@ -10,6 +15,8 @@ Console.WriteLine();
 Console.WriteLine(artem.GetInfo());
 Console.WriteLine();
 Console.WriteLine(alexander.GetInfo());
+Console.WriteLine($"Предел здоровья Александра: {alexander.MaxHealth}");
+
 
 
 
@@ -47,7 +54,10 @@ Console.WriteLine(alexander.GetInfo());
 
 // лаб 2
 // Character Hawkeye = new Character("Соколиный глаз", 32, "Marvel", "Человек");
+// Console.WriteLine($"До: {Hawkeye.Age}");
 // Hawkeye.Grow(3);
-// Hawkeye.Grow(-3); // не сработает
-// Hawkeye.Rename("Глаз сокола");
-// Console.WriteLine(Hawkeye.GetInfo());
+// Console.WriteLine($"После Grow(3): {Hawkeye.Age}");
+// Hawkeye.Grow(-3);
+// Console.WriteLine($"После Grow(-3): {Hawkeye.Age}");
+// Character nn = new Character("неизвестный", 5000, "неизвестно", "Человек");
+// Console.WriteLine($"Создан с age=5000: {nn.Age}");
